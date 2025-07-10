@@ -1,7 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://gamemate-backend-dev.onrender.com"; // URL base do seu backend
-
+const API_URL = import.meta.env.VITE_API_URL;
 /**
  * Busca o perfil do usuário logado no backend.
  * @param token O ID Token do Firebase para autenticação.

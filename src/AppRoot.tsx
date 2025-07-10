@@ -10,6 +10,12 @@ export default function AppRoot() {
         <Button color="inherit" component={RouterLink} to="/search">
           Buscar Jogos
         </Button>
+        <Button color="inherit" component={RouterLink} to="/profile">
+          Meu Perfil
+        </Button>
+        <Button color="inherit" component={RouterLink} to="/login">
+          Entrar
+        </Button>
         <Outlet />
       </>
      );

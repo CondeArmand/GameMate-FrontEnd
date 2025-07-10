@@ -15,8 +15,7 @@ import usersApi from "../features/users/services/usersApi.ts";
 import {useConfirm} from "material-ui-confirm";
 
 
-const API_URL = 'https://gamemate-backend-dev.onrender.com'; // URL base do seu backend
-
+const API_URL = import.meta.env.VITE_API_URL;
 
 export default function ProfilePage() {
   const { profile, loading, error } = useUserProfile();

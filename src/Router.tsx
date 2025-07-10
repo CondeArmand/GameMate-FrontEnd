@@ -19,7 +19,7 @@ function Router() {
                 path="profile"
                 element={
                   <ProtectedRoute>
-                    <ProfilePage />s
+                    <ProfilePage />
                   </ProtectedRoute>
                 }
             />
