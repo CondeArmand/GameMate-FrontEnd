@@ -8,7 +8,6 @@ export interface OwnedGame {
     name: string;
     coverUrl: string | null;
     playtimeMinutes: number | null;
-    // Adicione outros campos do jogo que você retorna do backend
 }
 
 export default function useMyGames() {
@@ -28,8 +27,8 @@ export default function useMyGames() {
             try {
                 setLoading(true);
                 setError(null);
-                const ownedGamesData = await usersApi.getOwnedGames(idToken);
-                setGames(ownedGamesData);
+                const ownedGamesData = await usersApi.getOwnedGames(idToken, undefined);
+                setGames(ownedGamesData.data.data);
             } catch (err: any) {
                 setError(err.message || 'Erro ao carregar seus jogos.');
             } finally {

@@ -6,6 +6,7 @@ import RegisterPage from "./pages/RegisterPage.tsx";
 import ProtectedRoute from "./features/auth/components/ui/ProtectedRoute.tsx";
 import ProfilePage from "./pages/ProfilePage.tsx";
 import SearchPage from "./pages/SearchPage.tsx";
+import GameDetailsPage from "./pages/GameDetailsPage.tsx";
 
 function Router() {
   return (
@@ -15,6 +16,7 @@ function Router() {
             <Route path="login" element={<LoginPage />} />
             <Route path="register" element={<RegisterPage />} />
             <Route path="search" element={<SearchPage />} />
+            <Route path="/game/:id" element={<GameDetailsPage />} />
             <Route
                 path="profile"
                 element={
